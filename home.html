@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ماشین حساب</title>
+<!--css-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #292929;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.calc {
+  max-width: 400px;
+  width: 100%;
+  margin: 50px auto;
+  background-color: #383838;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.calc-display {
+  padding: 10px;
+  background-color: #292929;
+  border-bottom: 1px solid #383838;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.calc-display-input {
+  font-size: 24px;
+  background-color: #292929;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: #fff;
+}
+
+.calc-row {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.calc-button {
+  flex: 1;
+  margin: 0 8px 0 0;
+  padding: 14px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #3d3d3d;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease-in-out;
+  opacity: 0.8;
+}
+
+.calc-button:hover {
+  background-color: #505050;
+  opacity: 1;
+}
+
+.calc-button:active {
+  background-color: #595959;
+  opacity: 1;
+}
+
+.calc-button-gray {
+  background-color: #292929;
+  color: #fff;
+}
+
+.calc-button-red {
+  background-color: #d93025;
+}
+
+.calc-button-yellow {
+  background-color: #e6a024;
+}
+
+.calc-button-big {
+  font-size: 28px;
+  padding: 18px;
+}
+
+.lt-ie8 * {
+  box-sizing: content-box;
+}
+
+.lt-ie7 .calc-row {
+  margin-left: -8px;
+}
+
+.calc-img {
+  width: 100%;
+  height: auto;
+}
+
+.calc-title {
+  background-color: #3d3d3d;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.calc-clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.calc-brand {
+  float: right;
+  padding: 10px;
+  background-color: #3d3d3d;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  border-bottom-left-radius: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc {
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .calc-button {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .calc-button-big {
+    font-size: 24px;
+    padding: 16px;
+  }
+
+  .calc-title {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .calc-brand {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+</style>
+</head>
+<!--پایان بخش هدر-->
+<!--متن بالای صفحه-->
+<center>
+  <style>
+    .typing-text {
+      font-size: 24px;
+      color: #000;
+      font-family: Arial, sans-serif;
+      overflow: hidden; /* این خط برای پنهان کردن متن است */
+      white-space: nowrap; /* این خط برای جلوگیری از شکستن خط است */
+      border-right: .15em solid #000; /* خط دار کردن آخر کلمه */
+      display: inline-block;
+      vertical-align: middle;
+      animation: typing 2s steps(20, end), blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #000 }
+    }
+    </style>
+    </head>
+    <body>
+        <h1 class="typing-text"></h1>
+    <script>
+    const text = "ماشین حساب ساده این ماشین حساب توست علیرضا نصیری ساخته شده است امیدوارم از استفاده از این ماشین حساب لذت ببرید";
+    let textIndex = 0;
+
+    function typing() {
+      if (textIndex >= text.length) {
+        textIndex = 0; // اگر به انتهای متن رسیدیم، از ابتدا شروع کن
+      }
+      document.querySelector('.typing-text').textContent = text.slice(0, textIndex + 1);
+      textIndex++;
+    }
+
+    setInterval(typing, 100);
+    </script>
+<style>
+h1{
+    border: 3px solid rgb(102, 55, 212);
+    border-radius: 30px;
+    text-shadow: 3px 3px 5px hsl(160, 98%, 51%),-3px -3px 5px hsl(202, 99%, 43%);
+}
+</style>
+</center>
+<!--پایان کنسول متن-->
+<!--کد های اصلی ماشین حساب-->
+<body>
+  <form class="calc">
+    <p class="calc-display">
+      <input type="text" name="res" id="res" value="4815.1623" class="calc-display-input" onfocus="this.blur()">
+    </p>
+    <p class="calc-row">
+      <button type="button" class="calc-button calc-button-gray" onclick="s('Just....')">mrc</button>
+      <button type="button" class="calc-button calc-button-gray" onclick="s('....do..')">m-</button>
+      <button type="button" class="calc-button calc-button-gray" onclick="s('......it')">m+</button>
+      <button type="button" class="calc-button calc-button-red calc-button-big" onclick="a('/')">÷</button>
+    </p>
+    <p class="calc-row">
+      <button type="button" class="calc-button" onclick="a('7')">7</button>
+      <button type="button" class="calc-button" onclick="a('8')">8</button>
+      <button type="button" class="calc-button" onclick="a('9')">9</button>
+      <button type="button" class="calc-button calc-button-red calc-button-big" onclick="a('*')">x</button>
+    </p>
+    <p class="calc-row">
+      <button type="button" class="calc-button" onclick="a('4')">4</button>
+      <button type="button" class="calc-button" onclick="a('5')">5</button>
+      <button type="button" class="calc-button" onclick="a('6')">6</button>
+      <button type="button" class="calc-button calc-button-red calc-button-big" onclick="a('-')">-</button>
+    </p>
+    <p class="calc-row">
+      <button type="button" class="calc-button" onclick="a('1')">1</button>
+      <button type="button" class="calc-button" onclick="a('2')">2</button>
+      <button type="button" class="calc-button" onclick="a('3')">3</button>
+      <button type="button" class="calc-button calc-button-red calc-button-big" onclick="a('+')">+</button>
+    </p>
+    <p class="calc-row">
+      <button type="button" class="calc-button" onclick="a('0')">0</button>
+      <button type="button" class="calc-button" onclick="a('.')">.</button>
+      <button type="button" class="calc-button" onclick="s('')">C</button>
+      <button type="button" class="calc-button calc-button-yellow calc-button-big" onclick="e()">=</button>
+    </p>
+  </form>
+  <!--لینک و متن پایین صفحه-->
+  <center>
+  <a href="index.html">برای بازگشت کلیک کنید</a>
+  <style>
+    a{
+      text-shadow: 3px 3px 5px hsl(160, 98%, 51%),-3px -3px 5px hsl(202, 99%, 43%);
+      font-size: 24px;
+    }
+    </style>
+    </center>
+  <script>
+    function s(v) { document.getElementById('res').value = v }
+    function a(v) { document.getElementById('res').value += v }
+    function e() { try { s(eval(document.getElementById('res').value)) } catch(e) { s('Error') } }
+  </script>
+</div>
+<!--پایان-->
+</body>
+</html>

@@ -1,0 +1,368 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #444;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .calculator-container {
+    background-color: #eee;
+    border: 2px solid #444;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 320px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .calculator {
+    display: flex;
+    flex-direction: column;
+    height: 480px;
+  }
+  
+  .display {
+    background-color: #444;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .input {
+    color: #eee;
+    font-size: 2rem;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding: 10px;
+  }
+  
+  button {
+    background-color: #f2f2f2;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 2px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .number {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .operator {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .clear {
+    grid-column: span 4;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #291dcc;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #zero {
+    grid-column: span 2;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #5e5e5e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #decimal {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #5e5e5e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #percentage {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #292929;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #square-root {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #292929;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #square {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #292929;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #reciprocal {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #292929;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #one {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #5e5e5e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #two {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #5e5e5e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #three {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #5e5e5e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #add {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #f02e2e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  #equals {
+    grid-column: span 4;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #3cd32f;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #four {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #5e5e5e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #five {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #5e5e5e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #six {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #5e5e5e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #subtract {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #f02e2e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #seven {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #5e5e5e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #eight {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #5e5e5e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #nine {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #5e5e5e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #multiply {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #f02e2e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #C {
+    grid-column: span 2;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #292929;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #x2 {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #5e5e5e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #1/x {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #5e5e5e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  #divide {
+    grid-column: span 1;
+    grid-row: span 1;
+    font-size: 30px;
+    background-color: #f02e2e;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+  }
+  
+  .sort {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:flex-end;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .sort button {
+    background-color: #444;
+    color: #eee;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 2px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    width: 40px;
+    height: 40px;
+  }
+  
+  .sort button:hover {
+    background-color: #eee;
+    color: #444;
+  }
+  
+  .sort button:focus {
+    outline: none;
+  }
+  .calc-row {
+    display: flex;
+    margin-bottom: 8px;
+  }
